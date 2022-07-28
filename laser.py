@@ -3,9 +3,10 @@ from math import tan, pi, radians
 
 class Laser:
     """Laser characteristics"""
-    def __init__(self, fi, power):
+    def __init__(self, fi, power, wavelength):
         # fi - radiation divergence (расходимость излучения), [angular minute], [уг.мин]
         # P - radiation power impulse (импульсная мощность излучения), [MW], [МВт]
+        # wavelength - [mkm]
         self.fi = fi
         self.P = power * 10**6
 
