@@ -21,5 +21,9 @@ def test_4_power_signal():
     assert (round(rec.get_power_signal(100, 1_000), 9) == 6.28 * 10 ** -7)
 
 
+def test_5_SNR():
+    rec = Receiver(100, 1, 25, 1)
+    P = rec.get_power_signal(10, 1_000)
+    assert (round(rec.get_SNR(P), 2) == 3.14)
 
 
