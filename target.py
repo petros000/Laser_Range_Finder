@@ -23,7 +23,8 @@ class Target:
     def get_radiation_power(self, E):
         # E - laser power density, [W/m2]
         I = E / pi * self.ro * self.s
-        return round(I, 1)
+        return I
+
 
 
 #t1 = Target(0.9, 2)
