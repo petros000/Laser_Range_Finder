@@ -24,11 +24,11 @@ class Laser:
             return True
         return False
 
-    def get_power_density(self, R):
+    def get_power_density(self, Range):
         """return power density without Atmosphere"""
         # R - range, [m]
         # E - power density, [W/m2]
-        S = pi / 4 * (tan(radians(self.fi/60)) * R) ** 2 # square
+        S = pi / 4 * (tan(radians(self.fi/60)) * Range) ** 2 # square
         E = self.P / S
         return E
 

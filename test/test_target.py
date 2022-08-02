@@ -18,12 +18,12 @@ def test_3_init():
 
 def test_4_rad_pow():
     tgt = Target(1, 1)
-    assert (tgt.get_radiation_power(100) == 31.8)
+    assert (round(tgt.get_radiation_power(100), 1) == 31.8)
 
 
 def test_5_rad_pow():
     tgt = Target(0, 0)
-    assert (tgt.get_radiation_power(100) == 31.8)
+    assert (round(tgt.get_radiation_power(100), 1) == 31.8)
 
 
 
