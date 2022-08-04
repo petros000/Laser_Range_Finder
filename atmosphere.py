@@ -18,9 +18,8 @@ class Atmosphere:
             self.h_top = height_top     # [m]
         if self.__is_valid_input(visibility_range):
             self.vis = visibility_range     # [km]
-
-        self.t = temperature        # [C]
-
+        if type(temperature) in (int, float):
+            self.t = temperature        # [C]
         if self.__is_valid_input(wavelength):
             self.lmd = wavelength       # [mkm]
 
@@ -41,7 +40,7 @@ class Atmosphere:
         # height [m]
         T_h = lambda x: self.t + 273 - 0.0065 * height      # [K]
         P_h = lambda x: self.P0 * (1 - height / 44308)**5.255  # [mbar]
-        betta = 1.09 * 10**-6 * self.lmd ** -4 * P_h(height) / self.P0 * self.t / T_h(height)
+        betta = 1.09 * 10**-6 * self.lmd ** -4 * P_h(height) / self.P0 * (self.t + 273) / T_h(height)
 
         return betta
 
@@ -62,7 +61,7 @@ class Atmosphere:
         return res
 
 
-# atm1 = Atmosphere(5000, 5500, 20, 21, 1.06)
-# print(atm1.get_transmission_coefficient(25_000))
+atm1 = Atmosphere(0, 500, 20, -50, 1.06)
+print(atm1.get_transmission_coefficient(25_000))
 # print(atm1.aerosol_attenuation_indicator(5000))
-# print(atm1.molecular_attenuation_indicator(5000))
+print(atm1.molecular_attenuation_indicator(25_000))

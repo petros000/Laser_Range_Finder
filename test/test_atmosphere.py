@@ -26,9 +26,9 @@ def test_3_aerosol():
 
 def test_4_molecul():
     atm = Atmosphere(5000, 5500, 20, 21, 1.06)
-    assert (round(atm.molecular_attenuation_indicator(5000) * 10**8, 2) == 3.70)
+    assert (round(atm.molecular_attenuation_indicator(5000) * 10**8, 2) == 51.74)
 
 
 def test_5_coeff():
     atm = Atmosphere(5000, 5500, 20, 21, 1.06)
-    assert (round(atm.get_transmission_coefficient(25_000), 2) == 0.87)
+    assert (round(atm.get_transmission_coefficient(25_000), 2) == 0.86)
