@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(688, 469)
+        MainWindow.resize(681, 469)
         MainWindow.setInputMethodHints(QtCore.Qt.ImhNone)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -218,7 +218,7 @@ class Ui_MainWindow(object):
         self.spinBox_Visibilit_range.setFont(font)
         self.spinBox_Visibilit_range.setMinimum(1)
         self.spinBox_Visibilit_range.setProperty("value", 20)
-        self.spinBox_Visibilit_range.setObjectName("spinBox_Visibilit_range")
+        self.spinBox_Visibilit_range.setObjectName("spinBox_Visibility_range")
         self.spinBox_Temperature = QtWidgets.QSpinBox(self.centralwidget)
         self.spinBox_Temperature.setGeometry(QtCore.QRect(190, 390, 113, 25))
         font = QtGui.QFont()
@@ -284,7 +284,7 @@ class Ui_MainWindow(object):
         self.doubleSpinBox_Diameter.setObjectName("doubleSpinBox_Diameter")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 688, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 681, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
